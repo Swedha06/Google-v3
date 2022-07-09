@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Header from '../components/Header'
+import {SearchIcon, MicrophoneIcon} from "@heroicons/react/solid"
 
 
 export default function Home() {
@@ -14,6 +16,20 @@ export default function Home() {
       <Header/>
 
       {/* Body */}
+      <form className="flex flex-col items-center mt-40">
+        <Image width="300" objectFit="cover" height="150"
+        src="https://cdn.pixabay.com/photo/2013/01/29/22/07/google-76659_960_720.png"
+        />
+        <div className="flex w-full mt-3 mx-auto max-w-[90%] border border-blue-300 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
+         <SearchIcon className="h-5 text-gray-500 mr-5"/>
+         <input type="text" className="flex-grow focus:outline-none" />
+         <MicrophoneIcon className="h-5"/>
+        </div>
+        <div className="flex flex-col sm:flex-row w-[50%] mt-8 space-y-2 sm:space-y-0 sm:space-x-10 justify-center">
+        <button className="btn">Google Search Engine</button>
+        <button className="btn">I'm Feeling Ecstatic</button>
+        </div>
+      </form>
       {/* Footer */}
       
     </div>
