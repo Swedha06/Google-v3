@@ -13,8 +13,8 @@ export default function signin({providers})//client side
                        <img 
                        className="w-60 object-cover"
                        src="https://cdn.pixabay.com/photo/2013/01/29/22/07/google-76659_960_720.png" alt="google-logo" />
-                       <p className="text-l bold my-10 text-center">This website is created purely for learning purposes</p>
-                       <button className="bg-blue-600 rounded-lg text-white p-3 hover:bg-blue-800" onClick={()=>signIn(provider.id,{callbackUrl: "/"})}>Sign In with {provider.name}</button>
+                       <p className="text-l bold my-5 text-center">This website is created purely for learning purposes</p>
+                       <button className="bg-blue-600 my-5 rounded-lg text-white p-3 hover:bg-blue-800" onClick={()=>signIn(provider.id,{callbackUrl: "/"})}>Sign In with {provider.name}</button>
                     </div>
                ))}
             </div>

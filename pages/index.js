@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import {SearchIcon, MicrophoneIcon} from "@heroicons/react/solid"
+import Footer from '../components/Footer'
 
 
 export default function Home() {
@@ -16,11 +17,11 @@ export default function Home() {
       <Header/>
 
       {/* Body */}
-      <form className="flex flex-col items-center mt-40">
+      <form className="flex flex-col items-center mt-20">
         <Image width="300" objectFit="cover" height="150"
         src="https://cdn.pixabay.com/photo/2013/01/29/22/07/google-76659_960_720.png"
         />
-        <div className="flex w-full mt-3 mx-auto max-w-[90%] border border-blue-300 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
+        <div className="flex w-full mt-2 mx-auto max-w-[90%] border border-blue-300 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
          <SearchIcon className="h-5 text-gray-500 mr-5"/>
          <input type="text" className="flex-grow focus:outline-none" />
          <MicrophoneIcon className="h-5"/>
@@ -29,9 +30,19 @@ export default function Home() {
         <button className="btn">Google Search Engine</button>
         <button className="btn">I'm Feeling Ecstatic</button>
         </div>
+        <div className="flex space-x-3 items-center my-5">
+          <p className="text-medium">Available in :</p>
+          <p>தமிழ்</p>
+          <p>English</p>    
+          <p>हिन्दी</p>  
+          <p>मराठी</p>  
+          <p>ગુજરાતી</p> 
+          <p>മലയാളം</p>  
+          <p>ଓଡ଼ିଆ</p>
+        </div>
       </form>
       {/* Footer */}
-      
+      <Footer/>
     </div>
   )
 }
